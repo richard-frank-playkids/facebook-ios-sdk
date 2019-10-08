@@ -18,6 +18,14 @@
 
 #import <UIKit/UIKit.h>
 
+// Acts as a pass through for the public interface of the dependency.
+// It's the Swift equivalent of `@_exported import MyIndividualTarget`
+// See: https://forums.swift.org/t/16648 for more info.
+//
+#if SWIFT_PACKAGE
+#import "FBSDKCoreKit.h"
+#endif
+
 #if COCOAPODS
 #import <FBSDKLoginKit/FBSDKDeviceLoginCodeInfo.h>
 #import <FBSDKLoginKit/FBSDKDeviceLoginManager.h>

@@ -18,10 +18,10 @@
 
 #import <Foundation/Foundation.h>
 
-#ifdef COCOAPODS
-#import <FBSDKCoreKit/FBSDKAccessToken.h>
-#else
+#ifdef SWIFT_PACKAGE
 #import "FBSDKAccessToken.h"
+#else
+#import <FBSDKCoreKit/FBSDKAccessToken.h>
 #endif
 
 NS_ASSUME_NONNULL_BEGIN
