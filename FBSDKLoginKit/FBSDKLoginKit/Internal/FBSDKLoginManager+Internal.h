@@ -19,7 +19,7 @@
 #import <UIKit/UIKit.h>
 
 #ifdef SWIFT_PACKAGE
-#import "FBSDKCoreKit+Internal.h"
+#import "../../../FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKCoreKit+Internal.h"
 #import "FBSDKLoginManager.h"
 #elif defined COCOAPODS
 #import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>

@@ -19,7 +19,7 @@
 #ifdef COCOAPODS
 #import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
 #else
-#import "FBSDKCoreKit+Internal.h"
+#import "../../../FBSDKCoreKit/FBSDKCoreKit/Internal/FBSDKCoreKit+Internal.h"
 #endif
 
 @interface _FBSDKLoginRecoveryAttempter : FBSDKErrorRecoveryAttempter

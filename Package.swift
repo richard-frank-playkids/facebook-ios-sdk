@@ -3,6 +3,8 @@
 
 import PackageDescription
 
+let SWIFT_PACKAGE = "SWIFT_PACKAGE"
+
 let package = Package(
     name: "Facebook",
     platforms: [
@@ -32,7 +34,7 @@ let package = Package(
                 "Swift"
             ],
             cSettings: [
-                .define("SWIFT_PACKAGE"),
+                .define(SWIFT_PACKAGE),
                 .headerSearchPath("AppEvents"),
                 .headerSearchPath("Basics/Internal"),
                 .headerSearchPath("AppEvents/Internal/RestrictiveDataFilter"),
@@ -69,17 +71,18 @@ let package = Package(
                 "Swift"
             ],
             cSettings: [
-                .define("SWIFT_PACKAGE"),
+                .define(SWIFT_PACKAGE),
                 .headerSearchPath("Internal"),
+                .headerSearchPath("../../FBSDKCoreKit/FBSDKCoreKit/include"),
                 .headerSearchPath("../../FBSDKCoreKit/FBSDKCoreKit/Internal"),
             ]
         ),
         .target(
             name: "FacebookLogin",
-            dependencies: ["FacebookCore", "FBSDKLoginKit"],
+            dependencies: ["FBSDKLoginKit", "FacebookCore"],
             path: "FBSDKLoginKit/FBSDKLoginKit/Swift",
             cSettings: [
-                .define("SWIFT_PACKAGE"),
+                .define(SWIFT_PACKAGE),
             ]
         ),
     ]
