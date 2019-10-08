@@ -18,7 +18,11 @@
 
 #import <Foundation/Foundation.h>
 
+#if SWIFT_PACKAGE
+#import "FBSDKCoreKit.h"
+#else
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
+#endif
 
 #import "FBSDKDeviceLoginManagerResult.h"
 

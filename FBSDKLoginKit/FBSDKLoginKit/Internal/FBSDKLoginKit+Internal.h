@@ -16,7 +16,11 @@
 // IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
 // CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
+#ifdef SWIFT_PACKAGE
+#import "FBSDKLoginKit.h"
+#else
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
+#endif
 
 #import "FBSDKLoginCompletion+Internal.h"
 #import "FBSDKLoginError.h"

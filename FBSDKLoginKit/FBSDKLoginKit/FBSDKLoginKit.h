@@ -18,6 +18,7 @@
 
 #import <UIKit/UIKit.h>
 
+#if COCOAPODS
 #import <FBSDKLoginKit/FBSDKDeviceLoginCodeInfo.h>
 #import <FBSDKLoginKit/FBSDKDeviceLoginManager.h>
 #import <FBSDKLoginKit/FBSDKDeviceLoginManagerResult.h>
@@ -28,4 +29,19 @@
 #import <FBSDKLoginKit/FBSDKLoginManager.h>
 #import <FBSDKLoginKit/FBSDKLoginManagerLoginResult.h>
 #import <FBSDKLoginKit/FBSDKLoginTooltipView.h>
+#endif
+
+#else
+#import "FBSDKDeviceLoginCodeInfo.h"
+#import "FBSDKDeviceLoginManager.h"
+#import "FBSDKDeviceLoginManagerResult.h"
+#import "FBSDKLoginConstants.h"
+
+#if !TARGET_TV_OS
+#import "FBSDKLoginButton.h"
+#import "FBSDKLoginManager.h"
+#import "FBSDKLoginManagerLoginResult.h"
+#import "FBSDKLoginTooltipView.h"
+#endif
+
 #endif

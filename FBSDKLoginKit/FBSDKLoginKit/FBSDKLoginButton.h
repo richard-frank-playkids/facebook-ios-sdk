@@ -18,9 +18,13 @@
 
 #import <UIKit/UIKit.h>
 
+#if SWIFT_PACKAGE
+#import "FBSDKButton.h"
+#import "FBSDKLoginManager.h"
+#else
 #import <FBSDKCoreKit/FBSDKButton.h>
-
 #import <FBSDKLoginKit/FBSDKLoginManager.h>
+#endif
 
 #import "FBSDKTooltipView.h"
 

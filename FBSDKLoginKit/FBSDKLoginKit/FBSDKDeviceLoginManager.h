@@ -18,8 +18,13 @@
 
 #import <Foundation/Foundation.h>
 
+#if SWIFT_PACKAGE
+#import "FBSDKDeviceLoginCodeInfo.h"
+#import "FBSDKDeviceLoginManagerResult.h"
+#else
 #import <FBSDKLoginKit/FBSDKDeviceLoginCodeInfo.h>
 #import <FBSDKLoginKit/FBSDKDeviceLoginManagerResult.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

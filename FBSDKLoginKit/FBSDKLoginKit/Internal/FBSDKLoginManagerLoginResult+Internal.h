@@ -18,7 +18,11 @@
 
 #import <Foundation/Foundation.h>
 
+#if SWIFT_PACKAGE
+#import "FBSDKLoginManagerLoginResult.h"
+#else
 #import <FBSDKLoginKit/FBSDKLoginManagerLoginResult.h>
+#endif
 
 @interface FBSDKLoginManagerLoginResult()
 

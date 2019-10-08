@@ -13,6 +13,10 @@ let package = Package(
             name: "FBSDKCoreKit",
             targets: ["FBSDKCoreKit", "FacebookCore"]
         ),
+        .library(
+            name: "FBSDKLoginKit",
+            targets: ["FBSDKLoginKit", "FacebookLogin"]
+        ),
     ],
     dependencies: [
     ],
@@ -56,6 +60,27 @@ let package = Package(
             name: "FacebookCore",
             dependencies: ["FBSDKCoreKit"],
             path: "FBSDKCoreKit/FBSDKCoreKit/Swift"
-        )
+        ),
+        .target(
+            name: "FBSDKLoginKit",
+            dependencies: ["FBSDKCoreKit"],
+            path: "FBSDKLoginKit/FBSDKLoginKit",
+            exclude: [
+                "Swift"
+            ],
+            cSettings: [
+                .define("SWIFT_PACKAGE"),
+                .headerSearchPath("Internal"),
+                .headerSearchPath("../../FBSDKCoreKit/FBSDKCoreKit/Internal"),
+            ]
+        ),
+        .target(
+            name: "FacebookLogin",
+            dependencies: ["FacebookCore", "FBSDKLoginKit"],
+            path: "FBSDKLoginKit/FBSDKLoginKit/Swift",
+            cSettings: [
+                .define("SWIFT_PACKAGE"),
+            ]
+        ),
     ]
 )

@@ -18,7 +18,11 @@
 
 #import <Foundation/Foundation.h>
 
+#if COCOAPODS
 #import <FBSDKLoginKit/FBSDKLoginManager.h>
+#else
+#import "FBSDKLoginManager.h"
+#endif
 
 NS_SWIFT_NAME(LoginUtility)
 @interface FBSDKLoginUtility : NSObject

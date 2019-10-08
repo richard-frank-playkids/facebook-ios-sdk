@@ -19,13 +19,17 @@
 #import "FBSDKDeviceLoginManager.h"
 #import "FBSDKDeviceLoginManagerResult+Internal.h"
 
-#import <FBSDKCoreKit/FBSDKConstants.h>
-
-#ifdef COCOAPODS
+#ifdef SWIFT_PACKAGE
+#import "FBSDKConstants.h"
+#import "FBSDKCoreKit+Internal.h"
+#elif defined COCOAPODS
 #import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
+#import <FBSDKCoreKit/FBSDKConstants.h>
 #else
 #import "FBSDKCoreKit+Internal.h"
+#import <FBSDKCoreKit/FBSDKConstants.h>
 #endif
+
 #import "FBSDKDeviceLoginCodeInfo+Internal.h"
 #import "FBSDKLoginConstants.h"
 

@@ -18,12 +18,15 @@
 
 #import <UIKit/UIKit.h>
 
-#import <FBSDKLoginKit/FBSDKLoginManager.h>
-
-#ifdef COCOAPODS
+#ifdef SWIFT_PACKAGE
+#import "FBSDKCoreKit+Internal.h"
+#import "FBSDKLoginManager.h"
+#elif defined COCOAPODS
 #import <FBSDKCoreKit/FBSDKCoreKit+Internal.h>
+#import <FBSDKLoginKit/FBSDKLoginManager.h>
 #else
 #import "FBSDKCoreKit+Internal.h"
+#import <FBSDKLoginKit/FBSDKLoginManager.h>
 #endif
 
 @class FBSDKAccessToken;

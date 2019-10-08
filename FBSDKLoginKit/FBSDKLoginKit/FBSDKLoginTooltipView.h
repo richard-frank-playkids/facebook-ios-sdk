@@ -18,7 +18,11 @@
 
 #import <UIKit/UIKit.h>
 
+#if SWIFT_PACKAGE
+#import "FBSDKTooltipView.h"
+#else
 #import <FBSDKLoginKit/FBSDKTooltipView.h>
+#endif
 
 NS_ASSUME_NONNULL_BEGIN
 

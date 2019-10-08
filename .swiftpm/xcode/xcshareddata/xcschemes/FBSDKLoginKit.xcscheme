@@ -14,34 +14,6 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FBSDKCoreKit"
-               BuildableName = "FBSDKCoreKit"
-               BlueprintName = "FBSDKCoreKit"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
-               BlueprintIdentifier = "FacebookCore"
-               BuildableName = "FacebookCore"
-               BlueprintName = "FacebookCore"
-               ReferencedContainer = "container:">
-            </BuildableReference>
-         </BuildActionEntry>
-         <BuildActionEntry
-            buildForTesting = "YES"
-            buildForRunning = "YES"
-            buildForProfiling = "YES"
-            buildForArchiving = "YES"
-            buildForAnalyzing = "YES">
-            <BuildableReference
-               BuildableIdentifier = "primary"
                BlueprintIdentifier = "FBSDKLoginKit"
                BuildableName = "FBSDKLoginKit"
                BlueprintName = "FBSDKLoginKit"
@@ -78,9 +50,9 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "FBSDKCoreKit"
-            BuildableName = "FBSDKCoreKit"
-            BlueprintName = "FBSDKCoreKit"
+            BlueprintIdentifier = "FBSDKLoginKit"
+            BuildableName = "FBSDKLoginKit"
+            BlueprintName = "FBSDKLoginKit"
             ReferencedContainer = "container:">
          </BuildableReference>
       </MacroExpansion>
