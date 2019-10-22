@@ -21,7 +21,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '8.0'
   s.tvos.deployment_target = '10.0'
 
-  s.source       = { :git => 'https://github.com/facebook/facebook-ios-sdk.git' }
+  s.source       = { :git => 'https://github.com/richard-frank-playkids/facebook-ios-sdk.git' }
   s.pod_target_xcconfig = { 'DEFINES_MODULE' => 'YES' }
 
   s.ios.weak_frameworks = 'Accounts', 'CoreLocation', 'Social', 'Security', 'QuartzCore', 'CoreGraphics', 'UIKit', 'Foundation', 'AudioToolbox'
